@@ -13,5 +13,5 @@ def appFundamental(list_of_ratios, sector):
     predictions = pipeline.predict(temp)
     return predictions[0]
 
-print(appFundamental([1.4600,0.988012,0.843312,4.673462,0.823741,0.456823,0.305076,0.316398,27.944112,0.369388,0.656100],'technologySector'))
+# print(appFundamental([1.4600,0.988012,0.843312,4.673462,0.823741,0.456823,0.305076,0.316398,27.944112,0.369388,0.656100],'technologySector'))
 
