@@ -1,0 +1,23 @@
+ACN ML model - Accuracy = 57
+    DL model - Accuracy = 54
+
+ADBE ML model - Accuracy = 53
+    DL model - Accuracy = 54	
+
+ADBE ML model - Accuracy = 53
+    DL model - Accuracy = 55
+
+GOOGL ML model - Accuracy = 58
+    DL model - Accuracy = 53
+
+INTU ML model - Accuracy = 53
+    DL model - Accuracy = 47
+
+META ML model - Accuracy = 53
+    DL model - Accuracy = 48
+
+MSFT ML model - Accuracy = 59
+    DL model - Accuracy = 53
+
+NFLX ML model - Accuracy = 53
+    DL model - Accuracy = 46
