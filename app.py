@@ -66,10 +66,16 @@ with st.container():
         pass
     #   st.title("Financial Analysis Web App")  # Replace with your app title
     with col2:
-        # Option 2: Dedicated Buttons (using sidebar)
         with st.sidebar:
-            st.button("GitHub", key="github_button", on_click=lambda: webbrowser.open("https://github.com/aniket170105/Analysis-of-Stock-Market"))
-            st.button("App Report", key="report_button", on_click=lambda: webbrowser.open("https://github.com/aniket170105/Analysis-of-Stock-Market/blob/main/final_report.pdf"))
+            if st.button("GitHub"):
+                st.markdown('<meta http-equiv="refresh" content="0; url=https://github.com/aniket170105/Analysis-of-Stock-Market" />', unsafe_allow_html=True)
+            if st.button("App Report"):
+                st.markdown('<meta http-equiv="refresh" content="0; url=https://github.com/aniket170105/Analysis-of-Stock-Market/blob/main/final_report.pdf" />', unsafe_allow_html=True)
+    # with col2:
+    #     # Option 2: Dedicated Buttons (using sidebar)
+    #     with st.sidebar:
+    #         st.button("GitHub", key="github_button", on_click=lambda: webbrowser.open("https://github.com/aniket170105/Analysis-of-Stock-Market"))
+    #         st.button("App Report", key="report_button", on_click=lambda: webbrowser.open("https://github.com/aniket170105/Analysis-of-Stock-Market/blob/main/final_report.pdf"))
 
 # Company ticker input
 ticker = st.text_input("Enter company ticker:")
