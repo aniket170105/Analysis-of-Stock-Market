@@ -68,8 +68,8 @@ with st.container():
     with col2:
         # Option 2: Dedicated Buttons (using sidebar)
         with st.sidebar:
-            st.button("GitHub", key="github_button", on_click=lambda: webbrowser.open("https://github.com/aniket170105"))
-            st.button("App Report", key="report_button", on_click=lambda: webbrowser.open("https://github.com/aniket170105"))
+            st.button("GitHub", key="github_button", on_click=lambda: webbrowser.open("https://github.com/aniket170105/Analysis-of-Stock-Market"))
+            st.button("App Report", key="report_button", on_click=lambda: webbrowser.open("https://github.com/aniket170105/Analysis-of-Stock-Market/blob/main/final_report.pdf"))
 
 # Company ticker input
 ticker = st.text_input("Enter company ticker:")
