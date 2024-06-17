@@ -9,4 +9,3 @@ Requests==2.32.3
 scikit_learn==1.5.0
 streamlit==1.35.0
 yfinance==0.2.27
-lxml==4.6.3
