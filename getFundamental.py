@@ -5,7 +5,7 @@ import joblib
 import numpy as np
 from sklearn.pipeline import make_pipeline
 
-def appFundamental(list_of_ratios, sector):
+def appFundamental(list_of_ratios, sector=""):
     scaler = joblib.load('Fundamental Analysis/scaler.pkl')
     model = joblib.load('Fundamental Analysis/model.pkl')
     pipeline = make_pipeline(scaler, model)

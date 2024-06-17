@@ -61,7 +61,7 @@ def dosingleSentiment(text):
     client = Groq(
                 api_key='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',
             )
-    prompt = f'''Do the sentiment analysis of this article and give out a real value between 0 and 1, 0 showing negative sentiment and 1 showing positive sentiment. Only output real value between 0 and 1.
+    prompt = f'''Do the sentiment analysis of this article and give out a real value between 0 and 1, 0 showing negative sentiment and 1 showing positive sentiment.Output you analysis in max 100 words.
     Article:
     {text}
     '''
@@ -79,20 +79,25 @@ def dosingleSentiment(text):
         model="llama3-70b-8192",
     )
     print(chat_completion.choices[0].message.content)
-    return extract_real_number(chat_completion.choices[0].message.content)
+    return extract_real_number(chat_completion.choices[0].message.content),chat_completion.choices[0].message.content
 
 def doSentimentAnalysis(news_link):
     analysis_value = []
+    analysis_text = []
     for x in news_link:
         article = Article(x)
         article.download()
         article.parse()
-        analysis_value.append(dosingleSentiment(article.text))
-        time.sleep(5)   ### Working Fine
-    return np.array(analysis_value).mean()
+        a,b = dosingleSentiment(article.text)
+        analysis_value.append(a)
+        analysis_text.append(b)
+        # time.sleep(5)   ### Working Fine
+    return np.array(analysis_value).mean(),analysis_text
 
 def appSentiment(ticker_name):
     urls = getNewsLinkGoogle(ticker_name=ticker_name)
+    if len(urls)>5 :
+        urls = urls[:5]
     return doSentimentAnalysis(urls)
 
 
