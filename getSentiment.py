@@ -10,7 +10,8 @@ import time
 
 
 def getNewsLinkGoogle(ticker_name):
-    search_url = "https://www.google.com/search?q=yahoo+finance+{}&tbm=nws&prmd=nivsbmtz&source=lnt&tbs=qdr:d&sa=X".format(ticker_name)
+    # search_url = "https://www.google.com/search?q=yahoo+finance+{}&tbm=nws&prmd=nivsbmtz&source=lnt&tbs=qdr:d&sa=X".format(ticker_name)
+    search_url = "https://www.google.com/search?q=yahoo+finance+{}&tbm=nws".format(ticker_name)
     r = requests.get(search_url)                        ###################Think how can we add second page result
     soup = BeautifulSoup(r.text, 'html.parser')
     atags = soup.find_all('a')
